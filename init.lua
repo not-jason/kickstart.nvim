@@ -368,6 +368,14 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        pickers = {
+          find_files = {
+            layout_config = {
+              prompt_position = 'top',
+            },
+            sorting_strategy = 'ascending',
+          },
+        },
         extensions = {
           ['ui-select'] = { require('telescope.themes').get_dropdown() },
         },
@@ -598,6 +606,9 @@ require('lazy').setup({
         'lua_ls', -- Lua Language server
         'stylua', -- Used to format Lua code
         'pyright',
+        'jinja-lsp',
+        'html-lsp',
+        'htmx-lsp',
         -- You can add other tools here that you want Mason to install
       })
 
@@ -823,6 +834,10 @@ require('lazy').setup({
           },
         },
         style = {
+          diagnostics = { 'italic' },
+          spell = { 'italic' },
+          notes = { 'italic' },
+          disable_styles = {},
           tabline = { 'reverse' },
           search = { 'italic', 'reverse' },
           incsearch = { 'italic', 'reverse' },
